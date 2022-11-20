@@ -214,3 +214,4 @@ C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\Onboard
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\Onboarding.pdb
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\Onboarding.genruntimeconfig.cache
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\ref\Onboarding.dll
+C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll
