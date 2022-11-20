@@ -136,9 +136,8 @@ namespace Onboarding.Controllers
 
         private async Task<IActionResult> PasswordSignIn(OpenIddictRequest request)
         {
-            var user = await _userManager.FindByEmailAsync(request.Username)
-                    ?? await _userManager.FindByNameAsync(request.Username);
-
+            var user = await _userManager.FindByEmailAsync(request.Username);
+                    
             if (user == null || user.IsDeleted)
             {
                 return Forbid(authenticationSchemes: OpenIddictServerAspNetCoreDefaults.AuthenticationScheme,
