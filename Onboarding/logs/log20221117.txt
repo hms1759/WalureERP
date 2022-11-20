@@ -1,0 +1,179 @@
+2022-11-17 08:39:02.886 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 08:39:03.773 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 08:39:03.774 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 08:39:03.776 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 08:39:03.776 +01:00 [INF] Hosting environment: Development
+2022-11-17 08:39:03.776 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 08:39:17.443 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-17 08:39:17.444 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-17 08:39:17.540 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 103.3914ms
+2022-11-17 08:39:17.694 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 260.5037ms
+2022-11-17 08:39:17.883 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-17 08:40:46.878 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 08:40:47.491 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 08:40:47.494 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 08:40:47.503 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 08:40:47.503 +01:00 [INF] Hosting environment: Development
+2022-11-17 08:40:47.503 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 08:41:33.926 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 08:41:34.369 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 08:41:34.370 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 08:41:34.373 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 08:41:34.373 +01:00 [INF] Hosting environment: Development
+2022-11-17 08:41:34.373 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 08:41:40.744 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-17 08:42:29.274 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The Authority/Host could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Onboarding.ServiceRegistration.<>c.<RegisterServices>b__1_0(SwaggerGenOptions option) in C:\Users\hp\source\repos\WalureERP\Onboarding\ServiceRegistration.cs:line 30
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.ConstructorInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at lambda_method8(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2022-11-17 08:42:29.933 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 500 - text/html;+charset=utf-8 49195.2196ms
+2022-11-17 08:42:30.055 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-17 08:42:30.094 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-17 08:42:30.125 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 30.4179ms
+2022-11-17 08:42:31.106 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1050.5966ms
+2022-11-17 08:42:35.664 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/favicon.ico - -
+2022-11-17 08:43:00.319 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The Authority/Host could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Onboarding.ServiceRegistration.<>c.<RegisterServices>b__1_0(SwaggerGenOptions option) in C:\Users\hp\source\repos\WalureERP\Onboarding\ServiceRegistration.cs:line 30
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at InvokeStub_ConfigureSwaggerGeneratorOptions..ctor(Object, Object, IntPtr*)
+   at System.Reflection.ConstructorInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at lambda_method8(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2022-11-17 08:43:00.567 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/favicon.ico - - - 500 - text/plain;+charset=utf-8 24903.7608ms
+2022-11-17 08:54:39.729 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 08:54:40.264 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 08:54:40.265 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 08:54:40.271 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 08:54:40.273 +01:00 [INF] Hosting environment: Development
+2022-11-17 08:54:40.273 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 08:54:45.652 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-17 08:54:46.111 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 461.6550ms
+2022-11-17 08:54:46.195 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-17 08:54:46.195 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-17 08:54:46.224 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 28.6355ms
+2022-11-17 08:54:46.352 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 157.4737ms
+2022-11-17 08:54:47.034 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-17 08:54:47.353 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 318.9341ms
+2022-11-17 10:51:30.281 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 10:51:30.650 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 10:51:30.651 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 10:51:30.653 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 10:51:30.653 +01:00 [INF] Hosting environment: Development
+2022-11-17 10:51:30.654 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 10:51:35.719 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-17 10:51:36.115 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 398.8413ms
+2022-11-17 10:51:36.265 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-17 10:51:36.277 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-17 10:51:36.297 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 31.7528ms
+2022-11-17 10:51:36.424 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 146.3200ms
+2022-11-17 10:51:36.909 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-17 10:51:37.177 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 268.6144ms
+2022-11-17 14:27:23.617 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 14:27:24.958 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 14:27:24.958 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 14:27:24.961 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 14:27:24.961 +01:00 [INF] Hosting environment: Development
+2022-11-17 14:27:24.961 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 14:27:31.165 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-17 14:27:32.207 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 1047.8392ms
+2022-11-17 14:27:34.576 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-17 14:27:34.576 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-17 14:27:34.595 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 19.6356ms
+2022-11-17 14:27:34.877 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 300.8407ms
+2022-11-17 14:27:35.667 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-17 14:27:36.029 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 361.7966ms
+2022-11-17 15:16:36.041 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 15:16:36.862 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 15:16:36.863 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 15:16:36.865 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 15:16:36.865 +01:00 [INF] Hosting environment: Development
+2022-11-17 15:16:36.866 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 15:16:42.065 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-17 15:16:44.917 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 2857.1842ms
+2022-11-17 15:16:46.696 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-17 15:16:46.873 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-17 15:16:47.046 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 349.4671ms
+2022-11-17 15:16:47.300 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 427.0551ms
+2022-11-17 15:16:47.616 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-17 15:16:47.980 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 363.5744ms
+2022-11-17 17:57:28.841 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-17 17:57:29.403 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-17 17:57:29.404 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-17 17:57:29.407 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-17 17:57:29.407 +01:00 [INF] Hosting environment: Development
+2022-11-17 17:57:29.407 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\Onboarding
+2022-11-17 17:57:38.099 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-17 17:57:38.907 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 810.8828ms
+2022-11-17 17:57:53.739 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-17 17:57:54.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-17 17:57:54.467 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 728.1157ms
+2022-11-17 17:57:55.852 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1810.8859ms
+2022-11-17 17:57:56.218 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-17 17:57:56.547 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 329.9109ms

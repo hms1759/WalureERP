@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Onboarding</name>
+    </assembly>
+    <members>
+        <member name="T:Onboarding.Component.OAuth.OpenIddictManager">
+            <summary>
+            OpendIddict Manager
+            </summary>
+        </member>
+        <member name="T:Onboarding.Controllers.AccountController">
+            <summary>
+            Api for Account and User registration
+            </summary>
+        </member>
+        <member name="M:Onboarding.Controllers.AccountController.#ctor(DataAccess.IServices.IAccountServices,Microsoft.AspNetCore.Identity.UserManager{DataAccess.Model.Identity.WalureUser},Microsoft.AspNetCore.Identity.SignInManager{DataAccess.Model.Identity.WalureUser},Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Identity.IdentityOptions})">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Onboarding.Controllers.AccountController.Register(DataAccess.Dto.RegisterDto)">
+            <summary>
+            Endpoint for User Registration
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Onboarding.Controllers.AccountController.Token" -->
+        <member name="T:Onboarding.MiddlewarePipeline">
+            <summary>
+             configuration of middleware  pipeline
+            </summary>
+        </member>
+        <member name="M:Onboarding.MiddlewarePipeline.TableMigrationScript(Microsoft.Extensions.Configuration.ConfigurationManager)">
+            <summary>
+            Sql migration for table Schema
+            </summary>
+        </member>
+        <member name="M:Onboarding.MiddlewarePipeline.StoredProcedureMigrationScript(Microsoft.Extensions.Configuration.ConfigurationManager)">
+            <summary>
+            Sql migration for stored procedure
+            </summary>
+        </member>
+    </members>
+</doc>
