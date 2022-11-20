@@ -12,6 +12,7 @@ namespace DataAccess.Maps;
 
 public class WalureUserMap : IEntityTypeConfiguration<WalureUser>
 {
+    private readonly UserManager<WalureUser> _userManager;
     public CustomPasswordHasher Hasher { get; set; } = new CustomPasswordHasher();
 
     public void Configure(EntityTypeBuilder<WalureUser> builder)
@@ -37,7 +38,8 @@ public class WalureUserMap : IEntityTypeConfiguration<WalureUser>
             NormalizedUserName = Defaults.SysUserEmail.ToString().ToUpper(),
             TwoFactorEnabled = false,
             PhoneNumberConfirmed = true,
-            PasswordHash = Hasher.HashPassword(null, "micr0s0ft_"),
+            PasswordHash = _userManager.GetHashCode("micr0s0ft_"),
+           // PasswordHash = Hasher.HashPassword(null, "micr0s0ft_"),
             SecurityStamp = "536f8ac3-0df8-45d2-8f34-630d0a2ed6e6",
             UserType = UserTypes.inBuilt,
         };

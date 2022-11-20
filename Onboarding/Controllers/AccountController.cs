@@ -136,8 +136,9 @@ namespace Onboarding.Controllers
 
         private async Task<IActionResult> PasswordSignIn(OpenIddictRequest request)
         {
-            var user = await _userManager.FindByEmailAsync(request.Username);
-                    
+            var user = await _userManager.FindByEmailAsync(request.Username)
+                    ?? await _userManager.FindByNameAsync(request.Username);
+
             if (user == null || user.IsDeleted)
             {
                 return Forbid(authenticationSchemes: OpenIddictServerAspNetCoreDefaults.AuthenticationScheme,
@@ -159,9 +160,7 @@ namespace Onboarding.Controllers
                    }));
             }
 
-            // Reject the token request if two - factor authentication has been enabled by the user.
-            //if (_userManager.SupportsUserTwoFactor && await _userManager.GetTwoFactorEnabledAsync(user))
-            //{
+          
             if (!String.IsNullOrEmpty(request.Password))
             {
                 if (!await _userManager.CheckPasswordAsync(user, request.Password))
@@ -229,7 +228,7 @@ namespace Onboarding.Controllers
                 // The other claims will only be added to the access_token, which is encrypted when using the default format.
                 if ((claim.Type == Claims.Name && principal.HasScope(Scopes.Profile)) ||
                     (claim.Type == Claims.Email && principal.HasScope(Scopes.Email)) ||
-                    (claim.Type == Claims.Role && principal.HasScope("WALURE_BASIC_USER")) ||
+                    (claim.Type == Claims.Role && principal.HasScope(Scopes.Roles)) ||
                     (claim.Type == Claims.Audience && principal.HasScope(Claims.Audience)))
                 {
                     destinations.Add(Destinations.IdentityToken);

@@ -104,9 +104,9 @@ namespace DataAccess.Services
                 role = await _roleManager.FindByIdAsync(model.RoleId.Value.ToString());
             }
             
-            var UuerModel = await _userManager.FindByNameAsync(model.UserName);
+            var UserModel = await _userManager.FindByNameAsync(model.UserName);
 
-            if (model != null)
+            if (UserModel != null)
             {
                 base.Results.Add(new ValidationResult($"User already exist."));
                 return model;
