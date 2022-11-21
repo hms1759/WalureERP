@@ -1930,3 +1930,17 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
 2022-11-21 13:03:55.754 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 77.1145ms
 2022-11-21 13:03:56.181 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
 2022-11-21 13:03:56.518 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.9004ms
+2022-11-21 13:14:25.393 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-21 13:14:25.735 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-21 13:14:25.735 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-21 13:14:25.737 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-21 13:14:25.738 +01:00 [INF] Hosting environment: Development
+2022-11-21 13:14:25.738 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding
+2022-11-21 13:14:28.436 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-21 13:14:28.891 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 461.0930ms
+2022-11-21 13:14:29.903 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-21 13:14:29.904 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-21 13:14:29.915 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 11.6733ms
+2022-11-21 13:14:30.008 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.0634ms
+2022-11-21 13:14:30.627 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-21 13:14:31.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 393.8069ms

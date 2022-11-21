@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+#pragma warning disable CS1591 
 
 namespace Onboarding.Component.OAuth
 {
@@ -17,6 +18,7 @@ namespace Onboarding.Component.OAuth
     public class OpenIddictManager
     {
         public static async Task CreateClientApps(string basePath, OpenIddictApplicationManager<WalureOpenIddictApplication> manager,
+
             CancellationToken cancellationToken)
         {   var webApp = new WalureOpenIddictApplication
                 {

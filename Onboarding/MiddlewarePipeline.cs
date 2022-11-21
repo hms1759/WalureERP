@@ -1,4 +1,5 @@
 ﻿using DbUp;
+#nullable disable
 
 namespace Onboarding
 {/// <summary>

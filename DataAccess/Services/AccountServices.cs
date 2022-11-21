@@ -1,6 +1,4 @@
 ﻿
-
-#pragma warning disable CS1591 
 using DataAccess.Dto;
 using DataAccess.Enums;
 using DataAccess.Helper;
@@ -103,6 +101,12 @@ namespace DataAccess.Services
             else if (model.RoleId.HasValue)
             {
                 role = await _roleManager.FindByIdAsync(model.RoleId.Value.ToString());
+                if (role == null)
+                {
+                    base.Results.Add(new ValidationResult($" Role with {model.RoleId} not found"));
+                    return model;
+
+                }
             }
             
             var UserModel = await _userManager.FindByNameAsync(model.UserName);
