@@ -122,6 +122,7 @@ C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Dapper.
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\dbup-core.dll
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\dbup-sqlserver.dll
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Humanizer.dll
+C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
@@ -214,4 +215,3 @@ C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\Onboard
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\Onboarding.pdb
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\Onboarding.genruntimeconfig.cache
 C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\obj\Debug\net7.0\ref\Onboarding.dll
-C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll

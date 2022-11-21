@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class @int : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -249,9 +249,9 @@ namespace DataAccess.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "CreatedBy", "CreatedOn", "InBuilt", "ModifiedBy", "ModifiedOn", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { new Guid("3134fd36-f284-4634-a2d1-31f6ddef2668"), "42b13c0386ce4c9baaea63aec3ade775", null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), true, null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "WALURE_BASIC_USER", "WALURE_BASIC_USER" },
-                    { new Guid("3134ff36-f284-4634-a2d1-31f6ddaf2668"), "42b12c0386ce4c9baaea63aec3ade765", null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), true, null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "WALURE_ADMIN", "WALURE_ADMIN" },
-                    { new Guid("a1b6b6b0-0825-4975-a93d-df3dc86f8cc7"), "e437a567e45c4b01a5d1cefe125023d7", null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), true, null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "INBUILT_ADMIN", "INBUILT_ADMIN" }
+                    { new Guid("57240ef7-daba-4ce2-9224-34f5ea110f55"), "42136372-2da0-4ef2-83c1-59bfcf367648", null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), false, null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "WALURE_ADMIN", "WALURE_ADMIN" },
+                    { new Guid("5a30ac88-4cce-45e5-95c3-4f540b682402"), "54981452-7c29-47ac-8db3-d4ac153a40fe", null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), false, null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "WALURE_BASIC_USER", "WALURE_BASIC_USER" },
+                    { new Guid("62ba02d3-fdc4-4a57-9db5-6608212f1106"), "d11d5ff6-566e-4b13-a889-f02b27dc4fcf", null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), true, null, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "INBUILT_ADMIN", "INBUILT_ADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -259,20 +259,20 @@ namespace DataAccess.Migrations
                 columns: new[] { "Id", "ClaimType", "ClaimValue", "RoleId" },
                 values: new object[,]
                 {
-                    { 4, "WalureRoleClaim", "FULL_CONTROL", new Guid("a1b6b6b0-0825-4975-a93d-df3dc86f8cc7") },
-                    { 5, "WalureRoleClaim", "FULL_DEPARTMENT_CONTROL", new Guid("3134ff36-f284-4634-a2d1-31f6ddaf2668") },
-                    { 6, "WalureRoleClaim", "FULL_OFFICE_CONTROL", new Guid("3134fd36-f284-4634-a2d1-31f6ddef2668") }
+                    { 4, "WalureRoleClaim", "FULL_CONTROL", new Guid("62ba02d3-fdc4-4a57-9db5-6608212f1106") },
+                    { 5, "WalureRoleClaim", "FULL_DEPARTMENT_CONTROL", new Guid("57240ef7-daba-4ce2-9224-34f5ea110f55") },
+                    { 6, "WalureRoleClaim", "FULL_OFFICE_CONTROL", new Guid("5a30ac88-4cce-45e5-95c3-4f540b682402") }
                 });
 
             migrationBuilder.InsertData(
                 table: "WalureUser",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedBy", "CreatedOn", "Email", "EmailConfirmed", "FirstName", "Gender", "IsDeleted", "LastName", "LockoutEnabled", "LockoutEnd", "MiddleName", "ModifiedBy", "ModifiedOn", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "SecurityStamp", "TwoFactorEnabled", "UserName", "UserType" },
-                values: new object[] { new Guid("e576df51-cec4-44a2-b4c2-ebf25178ea8f"), 0, "49cc8d1e-5f64-4d20-9ef5-2096e725ade5", "Admin@walurecapital.com", new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Admin@walurecapital.com", true, null, 0, false, null, false, null, null, "Admin@walurecapital.com", new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "ADMIN@WALURECAPITAL.COM", "ADMIN@WALURECAPITAL.COM", "$2a$11$obt3v2C1G9HdxVO./WAqf.KgXjjvFWEbSffAPJgACiC3GmX73PqWS", "08009300832", true, null, "536f8ac3-0df8-45d2-8f34-630d0a2ed6e6", false, "Admin@walurecapital.com", 0 });
+                values: new object[] { new Guid("9bf9c4ed-96dd-40b2-a63d-b0aed45f2848"), 1, "d328c3df-d8e3-4ae2-988e-0e6b1e12780c", "Admin@walurecapital.com", new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Admin@walurecapital.com", false, "Admin", 0, false, "Admin", false, null, null, "Admin@walurecapital.com", new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "ADMIN@WALURECAPITAL.COM", "ADMIN@WALURECAPITAL.COM", "AQAAAAIAAYagAAAAEOE3DG1T8jQCm8bfSQl9k39GU55zj+YA+XPwIsXCW4nlhvRWqCJbE3lvQEYL5+824Q==", "08009300832", false, null, "98bc0405-02c6-42f1-bc77-3f97d9e3e46f", false, "Admin@walurecapital.com", 0 });
 
             migrationBuilder.InsertData(
                 table: "WalureUserRole",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { new Guid("a1b6b6b0-0825-4975-a93d-df3dc86f8cc7"), new Guid("9bf9c4ed-96dd-40b2-a63d-b0aed45f2848") });
+                values: new object[] { new Guid("62ba02d3-fdc4-4a57-9db5-6608212f1106"), new Guid("9bf9c4ed-96dd-40b2-a63d-b0aed45f2848") });
 
             migrationBuilder.CreateIndex(
                 name: "IX_OpenIddictApplications_ClientId",

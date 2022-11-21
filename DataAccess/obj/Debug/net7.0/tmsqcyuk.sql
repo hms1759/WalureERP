@@ -172,9 +172,9 @@ GO
 IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'InBuilt', N'ModifiedBy', N'ModifiedOn', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[WalureRole]'))
     SET IDENTITY_INSERT [WalureRole] ON;
 INSERT INTO [WalureRole] ([Id], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [InBuilt], [ModifiedBy], [ModifiedOn], [Name], [NormalizedName])
-VALUES ('57240ef7-daba-4ce2-9224-34f5ea110f55', N'42136372-2da0-4ef2-83c1-59bfcf367648', NULL, '2019-09-16T00:00:00.0000000', CAST(0 AS bit), NULL, '2019-09-16T00:00:00.0000000', N'WALURE_ADMIN', N'WALURE_ADMIN'),
-('5a30ac88-4cce-45e5-95c3-4f540b682402', N'54981452-7c29-47ac-8db3-d4ac153a40fe', NULL, '2019-09-16T00:00:00.0000000', CAST(0 AS bit), NULL, '2019-09-16T00:00:00.0000000', N'WALURE_BASIC_USER', N'WALURE_BASIC_USER'),
-('62ba02d3-fdc4-4a57-9db5-6608212f1106', N'd11d5ff6-566e-4b13-a889-f02b27dc4fcf', NULL, '2019-09-16T00:00:00.0000000', CAST(1 AS bit), NULL, '2019-09-16T00:00:00.0000000', N'INBUILT_ADMIN', N'INBUILT_ADMIN');
+VALUES ('57240ef7-daba-4ce2-9224-34f5ea110f55', N'4ec7f168-a0ca-42ba-afdf-484d4f59227f', NULL, '2019-09-16T00:00:00.0000000', CAST(0 AS bit), NULL, '2019-09-16T00:00:00.0000000', N'WALURE_ADMIN', N'WALURE_ADMIN'),
+('5a30ac88-4cce-45e5-95c3-4f540b682402', N'73ef5430-5614-4529-9a51-b3adb818e810', NULL, '2019-09-16T00:00:00.0000000', CAST(0 AS bit), NULL, '2019-09-16T00:00:00.0000000', N'WALURE_BASIC_USER', N'WALURE_BASIC_USER'),
+('62ba02d3-fdc4-4a57-9db5-6608212f1106', N'9bc676ff-1def-46be-baba-76190de31276', NULL, '2019-09-16T00:00:00.0000000', CAST(1 AS bit), NULL, '2019-09-16T00:00:00.0000000', N'INBUILT_ADMIN', N'INBUILT_ADMIN');
 IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'InBuilt', N'ModifiedBy', N'ModifiedOn', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[WalureRole]'))
     SET IDENTITY_INSERT [WalureRole] OFF;
 GO
@@ -192,7 +192,7 @@ GO
 IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Email', N'EmailConfirmed', N'FirstName', N'Gender', N'IsDeleted', N'LastName', N'LockoutEnabled', N'LockoutEnd', N'MiddleName', N'ModifiedBy', N'ModifiedOn', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'RefreshToken', N'SecurityStamp', N'TwoFactorEnabled', N'UserName', N'UserType') AND [object_id] = OBJECT_ID(N'[WalureUser]'))
     SET IDENTITY_INSERT [WalureUser] ON;
 INSERT INTO [WalureUser] ([Id], [AccessFailedCount], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Email], [EmailConfirmed], [FirstName], [Gender], [IsDeleted], [LastName], [LockoutEnabled], [LockoutEnd], [MiddleName], [ModifiedBy], [ModifiedOn], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RefreshToken], [SecurityStamp], [TwoFactorEnabled], [UserName], [UserType])
-VALUES ('9bf9c4ed-96dd-40b2-a63d-b0aed45f2848', 1, N'd328c3df-d8e3-4ae2-988e-0e6b1e12780c', N'Admin@walurecapital.com', '2019-09-16T00:00:00.0000000', N'Admin@walurecapital.com', CAST(0 AS bit), N'Admin', 0, CAST(0 AS bit), N'Admin', CAST(0 AS bit), NULL, NULL, N'Admin@walurecapital.com', '2019-09-16T00:00:00.0000000', N'ADMIN@WALURECAPITAL.COM', N'ADMIN@WALURECAPITAL.COM', N'AQAAAAIAAYagAAAAEOE3DG1T8jQCm8bfSQl9k39GU55zj+YA+XPwIsXCW4nlhvRWqCJbE3lvQEYL5+824Q==', N'08009300832', CAST(0 AS bit), NULL, N'98bc0405-02c6-42f1-bc77-3f97d9e3e46f', CAST(0 AS bit), N'Admin@walurecapital.com', 0);
+VALUES ('9bf9c4ed-96dd-40b2-a63d-b0aed45f2848', 1, N'9b3395bd-b43c-45ef-b623-0efffdb306a0', N'Admin@walurecapital.com', '2019-09-16T00:00:00.0000000', N'Admin@walurecapital.com', CAST(0 AS bit), N'Admin', 0, CAST(0 AS bit), N'Admin', CAST(0 AS bit), NULL, NULL, N'Admin@walurecapital.com', '2019-09-16T00:00:00.0000000', N'ADMIN@WALURECAPITAL.COM', N'ADMIN@WALURECAPITAL.COM', N'$2a$11$9I0ZltwLm60OYNuruW.5Z.0ieRE3MBqH.1.YSqmejXn3dDY/GIGx.', N'08009300832', CAST(0 AS bit), NULL, N'c52d7805-7487-471e-a7bd-ea72f30db89b', CAST(0 AS bit), N'Admin@walurecapital.com', 0);
 IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AccessFailedCount', N'ConcurrencyStamp', N'CreatedBy', N'CreatedOn', N'Email', N'EmailConfirmed', N'FirstName', N'Gender', N'IsDeleted', N'LastName', N'LockoutEnabled', N'LockoutEnd', N'MiddleName', N'ModifiedBy', N'ModifiedOn', N'NormalizedEmail', N'NormalizedUserName', N'PasswordHash', N'PhoneNumber', N'PhoneNumberConfirmed', N'RefreshToken', N'SecurityStamp', N'TwoFactorEnabled', N'UserName', N'UserType') AND [object_id] = OBJECT_ID(N'[WalureUser]'))
     SET IDENTITY_INSERT [WalureUser] OFF;
 GO
@@ -224,7 +224,7 @@ CREATE UNIQUE INDEX [IX_OpenIddictTokens_ReferenceId] ON [OpenIddictTokens] ([Re
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20221121103613_int', N'7.0.0');
+VALUES (N'20221121094454_int', N'7.0.0');
 GO
 
 COMMIT;

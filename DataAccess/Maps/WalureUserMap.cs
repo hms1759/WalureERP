@@ -2,6 +2,7 @@
 using DataAccess.Enums;
 using DataAccess.Model.Identity;
 using DataAccess.Password;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -22,6 +23,7 @@ public class WalureUserMap : IEntityTypeConfiguration<WalureUser>
 
     private void SetupUsers(EntityTypeBuilder<WalureUser> builder)
     {
+        
         var WalureUser = new WalureUser
         {
             CreatedBy = Defaults.SysUserEmail,
@@ -38,12 +40,12 @@ public class WalureUserMap : IEntityTypeConfiguration<WalureUser>
             NormalizedUserName = Defaults.SysUserEmail.ToUpper(),
             TwoFactorEnabled = false,
             PhoneNumberConfirmed = false,
-            PasswordHash = Hasher.HashPassword(null, "micr0s0ft_"),
             SecurityStamp = Guid.NewGuid().ToString(),
             UserType = UserTypes.inBuilt,
             AccessFailedCount = 1
         };
-
+        var _hasher = new PasswordHasher<WalureUser>();
+        WalureUser.PasswordHash = _hasher.HashPassword(WalureUser, "micr0s0ft_");
 
         builder.HasData(WalureUser);
     }

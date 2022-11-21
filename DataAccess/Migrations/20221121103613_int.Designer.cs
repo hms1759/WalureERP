@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221119150603_init")]
-    partial class init
+    [Migration("20221121103613_int")]
+    partial class @int
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,8 +62,8 @@ namespace DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a1b6b6b0-0825-4975-a93d-df3dc86f8cc7"),
-                            ConcurrencyStamp = "e437a567e45c4b01a5d1cefe125023d7",
+                            Id = new Guid("62ba02d3-fdc4-4a57-9db5-6608212f1106"),
+                            ConcurrencyStamp = "d11d5ff6-566e-4b13-a889-f02b27dc4fcf",
                             CreatedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InBuilt = true,
                             ModifiedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -72,20 +72,20 @@ namespace DataAccess.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3134ff36-f284-4634-a2d1-31f6ddaf2668"),
-                            ConcurrencyStamp = "42b12c0386ce4c9baaea63aec3ade765",
+                            Id = new Guid("57240ef7-daba-4ce2-9224-34f5ea110f55"),
+                            ConcurrencyStamp = "42136372-2da0-4ef2-83c1-59bfcf367648",
                             CreatedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InBuilt = true,
+                            InBuilt = false,
                             ModifiedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "WALURE_ADMIN",
                             NormalizedName = "WALURE_ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("3134fd36-f284-4634-a2d1-31f6ddef2668"),
-                            ConcurrencyStamp = "42b13c0386ce4c9baaea63aec3ade775",
+                            Id = new Guid("5a30ac88-4cce-45e5-95c3-4f540b682402"),
+                            ConcurrencyStamp = "54981452-7c29-47ac-8db3-d4ac153a40fe",
                             CreatedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InBuilt = true,
+                            InBuilt = false,
                             ModifiedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "WALURE_BASIC_USER",
                             NormalizedName = "WALURE_BASIC_USER"
@@ -119,21 +119,21 @@ namespace DataAccess.Migrations
                             Id = 4,
                             ClaimType = "WalureRoleClaim",
                             ClaimValue = "FULL_CONTROL",
-                            RoleId = new Guid("a1b6b6b0-0825-4975-a93d-df3dc86f8cc7")
+                            RoleId = new Guid("62ba02d3-fdc4-4a57-9db5-6608212f1106")
                         },
                         new
                         {
                             Id = 5,
                             ClaimType = "WalureRoleClaim",
                             ClaimValue = "FULL_DEPARTMENT_CONTROL",
-                            RoleId = new Guid("3134ff36-f284-4634-a2d1-31f6ddaf2668")
+                            RoleId = new Guid("57240ef7-daba-4ce2-9224-34f5ea110f55")
                         },
                         new
                         {
                             Id = 6,
                             ClaimType = "WalureRoleClaim",
                             ClaimValue = "FULL_OFFICE_CONTROL",
-                            RoleId = new Guid("3134fd36-f284-4634-a2d1-31f6ddef2668")
+                            RoleId = new Guid("5a30ac88-4cce-45e5-95c3-4f540b682402")
                         });
                 });
 
@@ -225,24 +225,26 @@ namespace DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("e576df51-cec4-44a2-b4c2-ebf25178ea8f"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "49cc8d1e-5f64-4d20-9ef5-2096e725ade5",
+                            Id = new Guid("9bf9c4ed-96dd-40b2-a63d-b0aed45f2848"),
+                            AccessFailedCount = 1,
+                            ConcurrencyStamp = "d328c3df-d8e3-4ae2-988e-0e6b1e12780c",
                             CreatedBy = "Admin@walurecapital.com",
                             CreatedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "Admin@walurecapital.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
+                            FirstName = "Admin",
                             Gender = 0,
                             IsDeleted = false,
+                            LastName = "Admin",
                             LockoutEnabled = false,
                             ModifiedBy = "Admin@walurecapital.com",
                             ModifiedOn = new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NormalizedEmail = "ADMIN@WALURECAPITAL.COM",
                             NormalizedUserName = "ADMIN@WALURECAPITAL.COM",
-                            PasswordHash = "$2a$11$obt3v2C1G9HdxVO./WAqf.KgXjjvFWEbSffAPJgACiC3GmX73PqWS",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOE3DG1T8jQCm8bfSQl9k39GU55zj+YA+XPwIsXCW4nlhvRWqCJbE3lvQEYL5+824Q==",
                             PhoneNumber = "08009300832",
-                            PhoneNumberConfirmed = true,
-                            SecurityStamp = "536f8ac3-0df8-45d2-8f34-630d0a2ed6e6",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "98bc0405-02c6-42f1-bc77-3f97d9e3e46f",
                             TwoFactorEnabled = false,
                             UserName = "Admin@walurecapital.com",
                             UserType = 0
@@ -312,7 +314,7 @@ namespace DataAccess.Migrations
                         new
                         {
                             UserId = new Guid("9bf9c4ed-96dd-40b2-a63d-b0aed45f2848"),
-                            RoleId = new Guid("a1b6b6b0-0825-4975-a93d-df3dc86f8cc7")
+                            RoleId = new Guid("62ba02d3-fdc4-4a57-9db5-6608212f1106")
                         });
                 });
 

@@ -18,6 +18,7 @@ using Shared.Dapper;
 using Shared.Dapper.Interfaces;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 #nullable disable
 
 namespace DataAccess.Services
@@ -78,14 +79,13 @@ namespace DataAccess.Services
                 this.Results.Add(new ValidationResult("Email is already exist"));
                 return model;
             }
+            if (!Regex.IsMatch(model.Email, RegexValidation.EMAIL_REGEX))
+            {
+                this.Results.Add(new ValidationResult("Input currect email format"));
+                return model;
+            }
 
-            //if (model.Email != RegexValidation.EMAIL_REGEX || model.Email != RegexValidation.EMAIL_REGEX2)
-            //{
-            //    this.Results.Add(new ValidationResult("Input currect email format"));
-            //    return model;
-            //}
-
-            //if (model.PhoneNumber != RegexValidation.PHONENUMBER_REGEX || model.PhoneNumber != RegexValidation.ALT_PHONENUMBER_REGEX)
+            //    if (model.PhoneNumber != RegexValidation.PHONENUMBER_REGEX )
             //{
             //    this.Results.Add(new ValidationResult("Input currect Phone Number format"));
             //    return model;
