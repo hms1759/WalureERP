@@ -9,7 +9,7 @@ namespace DataAccess.IServices
     /// <summary>
     /// 
     /// </summary>
-    public interface IAccountServices : IService<Staffs>
+    public interface IAccountServices : IService<WalureUser>
     {
         Task<RegisterDto> RegisterUser(RegisterDto model);
         Task<string> Login(string username, string? password, object? token);

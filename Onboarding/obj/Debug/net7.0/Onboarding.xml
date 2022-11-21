@@ -24,7 +24,11 @@
             Endpoint for User Registration
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Onboarding.Controllers.AccountController.Token" -->
+        <member name="M:Onboarding.Controllers.AccountController.Token">
+            <summary>
+            Login EndPoint
+            </summary>
+        </member>
         <member name="T:Onboarding.MiddlewarePipeline">
             <summary>
              configuration of middleware  pipeline

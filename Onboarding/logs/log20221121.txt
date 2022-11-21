@@ -1866,3 +1866,67 @@ WHERE [w].[NormalizedEmail] = @__normalizedEmail_0
 2022-11-21 12:43:50.202 +01:00 [INF] Executed action Onboarding.Controllers.AccountController.Register (Onboarding) in 8730.4985ms
 2022-11-21 12:43:50.204 +01:00 [INF] Executed endpoint 'Onboarding.Controllers.AccountController.Register (Onboarding)'
 2022-11-21 12:43:50.220 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 200 - application/json;+charset=utf-8 8914.0551ms
+2022-11-21 13:01:36.250 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74
+2022-11-21 13:01:36.259 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-21 13:01:36.286 +01:00 [INF] The token request was successfully extracted: {
+  "username": "Admin@walurecapital.com",
+  "password": "[redacted]",
+  "grant_type": "password"
+}.
+2022-11-21 13:01:36.323 +01:00 [INF] The token request was successfully validated.
+2022-11-21 13:01:36.329 +01:00 [INF] Executing endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:01:36.341 +01:00 [INF] Route matched with {action = "Token", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token() on controller Onboarding.Controllers.AccountController (Onboarding).
+2022-11-21 13:01:36.512 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [w].[Id], [w].[AccessFailedCount], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[Email], [w].[EmailConfirmed], [w].[FirstName], [w].[Gender], [w].[IsDeleted], [w].[LastName], [w].[LockoutEnabled], [w].[LockoutEnd], [w].[MiddleName], [w].[ModifiedBy], [w].[ModifiedOn], [w].[NormalizedEmail], [w].[NormalizedUserName], [w].[PasswordHash], [w].[PhoneNumber], [w].[PhoneNumberConfirmed], [w].[RefreshToken], [w].[SecurityStamp], [w].[TwoFactorEnabled], [w].[UserName], [w].[UserType]
+FROM [WalureUser] AS [w]
+WHERE [w].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-21 13:01:36.943 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[ClaimType], [w].[ClaimValue], [w].[UserId]
+FROM [WalureUserClaim] AS [w]
+WHERE [w].[UserId] = @__user_Id_0
+2022-11-21 13:01:37.007 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:01:37.027 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[InBuilt], [w].[ModifiedBy], [w].[ModifiedOn], [w].[Name], [w].[NormalizedName]
+FROM [WalureRole] AS [w]
+WHERE [w].[NormalizedName] = @__normalizedName_0
+2022-11-21 13:01:37.061 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[ClaimType], [w].[ClaimValue]
+FROM [WalureRoleClaim] AS [w]
+WHERE [w].[RoleId] = @__role_Id_0
+2022-11-21 13:01:51.227 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:01:51.744 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-21 13:01:52.209 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 100), @p10='?' (Size = 50), @p11='?' (Size = 400), @p12='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OpenIddictTokens] ([Id], [ApplicationId], [AuthorizationId], [ConcurrencyToken], [CreationDate], [ExpirationDate], [Payload], [Properties], [RedemptionDate], [ReferenceId], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-21 13:01:52.578 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 3598
+}.
+2022-11-21 13:01:52.584 +01:00 [INF] Executed action Onboarding.Controllers.AccountController.Token (Onboarding) in 16243.3407ms
+2022-11-21 13:01:52.585 +01:00 [INF] Executed endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:01:52.589 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74 - 200 2114 application/json;charset=UTF-8 16339.3934ms
+2022-11-21 13:03:51.169 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-21 13:03:51.452 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-21 13:03:51.453 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-21 13:03:51.458 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-21 13:03:51.458 +01:00 [INF] Hosting environment: Development
+2022-11-21 13:03:51.458 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding
+2022-11-21 13:03:54.005 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-21 13:03:54.590 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 590.1119ms
+2022-11-21 13:03:55.657 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-21 13:03:55.675 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 19.5226ms
+2022-11-21 13:03:55.677 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-21 13:03:55.754 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 77.1145ms
+2022-11-21 13:03:56.181 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-21 13:03:56.518 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.9004ms

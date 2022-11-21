@@ -63,11 +63,9 @@ namespace Onboarding.Controllers
             }
             return ApiResponse(result, Constant.Sucessfull, codes: ApiResponseCodes.OK);
         }
-
-        //<summary>
-        /// Get jwt access token
+        /// <summary>
+        /// Login EndPoint
         /// </summary>
-        /// <returns></returns>
         [AllowAnonymous]
         [HttpPost("~/api/auth/token"), Produces("application/json")]
         public async Task<IActionResult> Token()
@@ -244,13 +242,7 @@ namespace Onboarding.Controllers
                 identity.AddClaim(name);
             }
 
-            //if (user.IsPasswordDefault)
-            //{
-            //    var isUserPasswordDefault = new Claim(ClaimTypeHelpers.IsDefaultPassword, user.IsPasswordDefault ? "Yes" : "No");
-            //    isUserPasswordDefault.SetDestinations(Destinations.AccessToken);
-            //    identity.AddClaim(isUserPasswordDefault);
-            //}
-
+           
             var roles = await _userManager.GetRolesAsync(user);
             var userRole = roles.FirstOrDefault();
 

@@ -23,7 +23,7 @@ using System.Text.RegularExpressions;
 
 namespace DataAccess.Services
 {
-    public class AccountServices : Service<Staffs>, IAccountServices
+    public class AccountServices : Service<WalureUser>, IAccountServices
     {
 
         private readonly UserManager<WalureUser> _userManager;
