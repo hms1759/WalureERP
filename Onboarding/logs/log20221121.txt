@@ -1944,3 +1944,369 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
 2022-11-21 13:14:30.008 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.0634ms
 2022-11-21 13:14:30.627 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
 2022-11-21 13:14:31.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 393.8069ms
+2022-11-21 13:26:19.453 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-21 13:26:19.790 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-21 13:26:19.791 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-21 13:26:19.792 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-21 13:26:19.793 +01:00 [INF] Hosting environment: Development
+2022-11-21 13:26:19.794 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding
+2022-11-21 13:26:22.429 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-21 13:26:22.922 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 498.9278ms
+2022-11-21 13:26:24.240 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-21 13:26:24.255 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-21 13:26:24.273 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 17.6794ms
+2022-11-21 13:26:24.355 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 114.9998ms
+2022-11-21 13:26:25.029 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-21 13:26:25.507 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 478.0229ms
+2022-11-21 13:26:31.216 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:26:31.405 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:26:31.412 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:26:31.424 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 208.2417ms
+2022-11-21 13:26:43.404 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74
+2022-11-21 13:26:43.414 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-21 13:26:43.463 +01:00 [INF] The token request was successfully extracted: {
+  "username": "Admin@walurecapital.com",
+  "password": "[redacted]",
+  "grant_type": "password"
+}.
+2022-11-21 13:26:43.787 +01:00 [INF] The token request was successfully validated.
+2022-11-21 13:26:43.799 +01:00 [INF] Executing endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:26:43.823 +01:00 [INF] Route matched with {action = "Token", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token() on controller Onboarding.Controllers.AccountController (Onboarding).
+2022-11-21 13:26:48.311 +01:00 [INF] Executed DbCommand (126ms) [Parameters=[@__normalizedEmail_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [w].[Id], [w].[AccessFailedCount], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[Email], [w].[EmailConfirmed], [w].[FirstName], [w].[Gender], [w].[IsDeleted], [w].[LastName], [w].[LockoutEnabled], [w].[LockoutEnd], [w].[MiddleName], [w].[ModifiedBy], [w].[ModifiedOn], [w].[NormalizedEmail], [w].[NormalizedUserName], [w].[PasswordHash], [w].[PhoneNumber], [w].[PhoneNumberConfirmed], [w].[RefreshToken], [w].[SecurityStamp], [w].[TwoFactorEnabled], [w].[UserName], [w].[UserType]
+FROM [WalureUser] AS [w]
+WHERE [w].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-21 13:26:48.927 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[ClaimType], [w].[ClaimValue], [w].[UserId]
+FROM [WalureUserClaim] AS [w]
+WHERE [w].[UserId] = @__user_Id_0
+2022-11-21 13:26:48.983 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:26:49.000 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[InBuilt], [w].[ModifiedBy], [w].[ModifiedOn], [w].[Name], [w].[NormalizedName]
+FROM [WalureRole] AS [w]
+WHERE [w].[NormalizedName] = @__normalizedName_0
+2022-11-21 13:26:49.063 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[ClaimType], [w].[ClaimValue]
+FROM [WalureRoleClaim] AS [w]
+WHERE [w].[RoleId] = @__role_Id_0
+2022-11-21 13:26:55.861 +01:00 [INF] Executed DbCommand (44ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:26:57.310 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-21 13:26:57.842 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 100), @p10='?' (Size = 50), @p11='?' (Size = 400), @p12='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OpenIddictTokens] ([Id], [ApplicationId], [AuthorizationId], [ConcurrencyToken], [CreationDate], [ExpirationDate], [Payload], [Properties], [RedemptionDate], [ReferenceId], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-21 13:26:58.194 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 3599
+}.
+2022-11-21 13:26:58.208 +01:00 [INF] Executed action Onboarding.Controllers.AccountController.Token (Onboarding) in 14376.4518ms
+2022-11-21 13:26:58.210 +01:00 [INF] Executed endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:26:58.244 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74 - 200 2114 application/json;charset=UTF-8 14840.1686ms
+2022-11-21 13:27:19.275 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:27:19.382 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.ValidateDecryption(JwtTokenDecryptionParameters decryptionParameters, Boolean decryptionSucceeded, Boolean algorithmNotSupportedByCryptoProvider, StringBuilder exceptionStrings, StringBuilder keysAttempted)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.DecryptJwtToken(SecurityToken jwtToken, TokenValidationParameters validationParameters, JwtTokenDecryptionParameters decryptionParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DecryptToken(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-11-21 13:27:19.384 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2022-11-21 13:27:19.387 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:27:19.390 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:27:19.390 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 115.7149ms
+2022-11-21 13:27:44.167 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:27:44.168 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.ValidateDecryption(JwtTokenDecryptionParameters decryptionParameters, Boolean decryptionSucceeded, Boolean algorithmNotSupportedByCryptoProvider, StringBuilder exceptionStrings, StringBuilder keysAttempted)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.DecryptJwtToken(SecurityToken jwtToken, TokenValidationParameters validationParameters, JwtTokenDecryptionParameters decryptionParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DecryptToken(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-11-21 13:27:44.168 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2022-11-21 13:27:44.170 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:27:44.171 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:27:44.171 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 3.8845ms
+2022-11-21 13:28:10.035 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:28:10.047 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-11-21 13:28:10.047 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:28:10.047 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:28:10.047 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 12.4676ms
+2022-11-21 13:28:17.609 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:28:17.609 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-11-21 13:28:17.609 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:28:17.609 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:28:17.609 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 0.6114ms
+2022-11-21 13:28:18.813 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:28:18.814 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-11-21 13:28:18.814 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:28:18.814 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:28:18.815 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 1.2335ms
+2022-11-21 13:28:19.836 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:28:19.836 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-11-21 13:28:19.836 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:28:19.836 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:28:19.837 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 0.7901ms
+2022-11-21 13:28:35.039 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74
+2022-11-21 13:28:35.039 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-21 13:28:35.041 +01:00 [INF] The token request was successfully extracted: {
+  "username": "Admin@walurecapital.com",
+  "password": "[redacted]",
+  "grant_type": "password"
+}.
+2022-11-21 13:28:35.048 +01:00 [INF] The token request was successfully validated.
+2022-11-21 13:28:35.050 +01:00 [INF] Executing endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:28:35.051 +01:00 [INF] Route matched with {action = "Token", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token() on controller Onboarding.Controllers.AccountController (Onboarding).
+2022-11-21 13:28:35.145 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [w].[Id], [w].[AccessFailedCount], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[Email], [w].[EmailConfirmed], [w].[FirstName], [w].[Gender], [w].[IsDeleted], [w].[LastName], [w].[LockoutEnabled], [w].[LockoutEnd], [w].[MiddleName], [w].[ModifiedBy], [w].[ModifiedOn], [w].[NormalizedEmail], [w].[NormalizedUserName], [w].[PasswordHash], [w].[PhoneNumber], [w].[PhoneNumberConfirmed], [w].[RefreshToken], [w].[SecurityStamp], [w].[TwoFactorEnabled], [w].[UserName], [w].[UserType]
+FROM [WalureUser] AS [w]
+WHERE [w].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-21 13:28:35.372 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[ClaimType], [w].[ClaimValue], [w].[UserId]
+FROM [WalureUserClaim] AS [w]
+WHERE [w].[UserId] = @__user_Id_0
+2022-11-21 13:28:35.377 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:28:35.379 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[InBuilt], [w].[ModifiedBy], [w].[ModifiedOn], [w].[Name], [w].[NormalizedName]
+FROM [WalureRole] AS [w]
+WHERE [w].[NormalizedName] = @__normalizedName_0
+2022-11-21 13:28:35.387 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[ClaimType], [w].[ClaimValue]
+FROM [WalureRoleClaim] AS [w]
+WHERE [w].[RoleId] = @__role_Id_0
+2022-11-21 13:29:00.322 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:29:00.337 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-21 13:29:00.372 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 100), @p10='?' (Size = 50), @p11='?' (Size = 400), @p12='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OpenIddictTokens] ([Id], [ApplicationId], [AuthorizationId], [ConcurrencyToken], [CreationDate], [ExpirationDate], [Payload], [Properties], [RedemptionDate], [ReferenceId], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-21 13:29:00.382 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}.
+2022-11-21 13:29:00.384 +01:00 [INF] Executed action Onboarding.Controllers.AccountController.Token (Onboarding) in 25332.4338ms
+2022-11-21 13:29:00.384 +01:00 [INF] Executed endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:29:00.385 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74 - 200 2114 application/json;charset=UTF-8 25346.8110ms
+2022-11-21 13:29:26.196 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:29:26.197 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-11-21 13:29:26.198 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:29:26.198 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:29:26.198 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 1.5324ms
+2022-11-21 13:30:00.993 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:30:00.994 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-11-21 13:30:00.997 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:30:00.998 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:30:00.998 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 4.6647ms
+2022-11-21 13:30:34.411 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:30:34.412 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.ValidateDecryption(JwtTokenDecryptionParameters decryptionParameters, Boolean decryptionSucceeded, Boolean algorithmNotSupportedByCryptoProvider, StringBuilder exceptionStrings, StringBuilder keysAttempted)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.DecryptJwtToken(SecurityToken jwtToken, TokenValidationParameters validationParameters, JwtTokenDecryptionParameters decryptionParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DecryptToken(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-11-21 13:30:34.412 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2022-11-21 13:30:34.412 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:30:34.412 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:30:34.413 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 1.1690ms
+2022-11-21 13:30:43.049 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74
+2022-11-21 13:30:43.049 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-21 13:30:43.051 +01:00 [INF] The token request was successfully extracted: {
+  "username": "Admin@walurecapital.com",
+  "password": "[redacted]",
+  "grant_type": "password"
+}.
+2022-11-21 13:30:43.056 +01:00 [INF] The token request was successfully validated.
+2022-11-21 13:30:43.057 +01:00 [INF] Executing endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:30:43.057 +01:00 [INF] Route matched with {action = "Token", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token() on controller Onboarding.Controllers.AccountController (Onboarding).
+2022-11-21 13:31:01.716 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [w].[Id], [w].[AccessFailedCount], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[Email], [w].[EmailConfirmed], [w].[FirstName], [w].[Gender], [w].[IsDeleted], [w].[LastName], [w].[LockoutEnabled], [w].[LockoutEnd], [w].[MiddleName], [w].[ModifiedBy], [w].[ModifiedOn], [w].[NormalizedEmail], [w].[NormalizedUserName], [w].[PasswordHash], [w].[PhoneNumber], [w].[PhoneNumberConfirmed], [w].[RefreshToken], [w].[SecurityStamp], [w].[TwoFactorEnabled], [w].[UserName], [w].[UserType]
+FROM [WalureUser] AS [w]
+WHERE [w].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-21 13:31:01.875 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[ClaimType], [w].[ClaimValue], [w].[UserId]
+FROM [WalureUserClaim] AS [w]
+WHERE [w].[UserId] = @__user_Id_0
+2022-11-21 13:31:01.879 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:31:01.882 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[InBuilt], [w].[ModifiedBy], [w].[ModifiedOn], [w].[Name], [w].[NormalizedName]
+FROM [WalureRole] AS [w]
+WHERE [w].[NormalizedName] = @__normalizedName_0
+2022-11-21 13:31:01.885 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[ClaimType], [w].[ClaimValue]
+FROM [WalureRoleClaim] AS [w]
+WHERE [w].[RoleId] = @__role_Id_0
+2022-11-21 13:31:01.889 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:31:01.889 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-21 13:31:01.933 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 100), @p10='?' (Size = 50), @p11='?' (Size = 400), @p12='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OpenIddictTokens] ([Id], [ApplicationId], [AuthorizationId], [ConcurrencyToken], [CreationDate], [ExpirationDate], [Payload], [Properties], [RedemptionDate], [ReferenceId], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-21 13:31:01.937 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 3599
+}.
+2022-11-21 13:31:01.938 +01:00 [INF] Executed action Onboarding.Controllers.AccountController.Token (Onboarding) in 18880.0207ms
+2022-11-21 13:31:01.938 +01:00 [INF] Executed endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:31:01.938 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74 - 200 2114 application/json;charset=UTF-8 18888.9119ms
+2022-11-21 13:31:10.741 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:31:10.743 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.ValidateDecryption(JwtTokenDecryptionParameters decryptionParameters, Boolean decryptionSucceeded, Boolean algorithmNotSupportedByCryptoProvider, StringBuilder exceptionStrings, StringBuilder keysAttempted)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.DecryptJwtToken(SecurityToken jwtToken, TokenValidationParameters validationParameters, JwtTokenDecryptionParameters decryptionParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DecryptToken(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-11-21 13:31:10.743 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2022-11-21 13:31:10.744 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:31:10.744 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:31:10.744 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 2.6062ms
+2022-11-21 13:31:23.399 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:31:23.400 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.ValidateDecryption(JwtTokenDecryptionParameters decryptionParameters, Boolean decryptionSucceeded, Boolean algorithmNotSupportedByCryptoProvider, StringBuilder exceptionStrings, StringBuilder keysAttempted)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.DecryptJwtToken(SecurityToken jwtToken, TokenValidationParameters validationParameters, JwtTokenDecryptionParameters decryptionParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DecryptToken(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-11-21 13:31:23.400 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2022-11-21 13:31:23.400 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:31:23.400 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:31:23.400 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 1.2963ms
+2022-11-21 13:31:52.193 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:31:52.195 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.ValidateDecryption(JwtTokenDecryptionParameters decryptionParameters, Boolean decryptionSucceeded, Boolean algorithmNotSupportedByCryptoProvider, StringBuilder exceptionStrings, StringBuilder keysAttempted)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.DecryptJwtToken(SecurityToken jwtToken, TokenValidationParameters validationParameters, JwtTokenDecryptionParameters decryptionParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DecryptToken(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-11-21 13:31:52.196 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2022-11-21 13:31:52.196 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:31:52.196 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:31:52.196 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 3.0396ms
+2022-11-21 13:32:50.792 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-21 13:32:51.039 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-21 13:32:51.040 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-21 13:32:51.041 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-21 13:32:51.042 +01:00 [INF] Hosting environment: Development
+2022-11-21 13:32:51.042 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding
+2022-11-21 13:32:54.544 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-21 13:32:57.215 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 2661.8941ms
+2022-11-21 13:32:59.178 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-21 13:32:59.374 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-21 13:32:59.397 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 218.2573ms
+2022-11-21 13:32:59.467 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:32:59.589 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 215.0217ms
+2022-11-21 13:33:00.190 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-21 13:33:00.256 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.ValidateDecryption(JwtTokenDecryptionParameters decryptionParameters, Boolean decryptionSucceeded, Boolean algorithmNotSupportedByCryptoProvider, StringBuilder exceptionStrings, StringBuilder keysAttempted)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.DecryptJwtToken(SecurityToken jwtToken, TokenValidationParameters validationParameters, JwtTokenDecryptionParameters decryptionParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DecryptToken(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-11-21 13:33:00.261 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10609: Decryption failed. No Keys tried: token: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2022-11-21 13:33:00.328 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:33:00.349 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:33:00.511 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 1043.3714ms
+2022-11-21 13:33:00.849 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 659.0919ms
+2022-11-21 13:33:07.621 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74
+2022-11-21 13:33:07.634 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-21 13:33:07.706 +01:00 [INF] The token request was successfully extracted: {
+  "username": "Admin@walurecapital.com",
+  "password": "[redacted]",
+  "grant_type": "password"
+}.
+2022-11-21 13:33:08.133 +01:00 [INF] The token request was successfully validated.
+2022-11-21 13:33:08.150 +01:00 [INF] Executing endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:33:08.187 +01:00 [INF] Route matched with {action = "Token", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token() on controller Onboarding.Controllers.AccountController (Onboarding).
+2022-11-21 13:33:19.928 +01:00 [INF] Executed DbCommand (107ms) [Parameters=[@__normalizedEmail_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [w].[Id], [w].[AccessFailedCount], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[Email], [w].[EmailConfirmed], [w].[FirstName], [w].[Gender], [w].[IsDeleted], [w].[LastName], [w].[LockoutEnabled], [w].[LockoutEnd], [w].[MiddleName], [w].[ModifiedBy], [w].[ModifiedOn], [w].[NormalizedEmail], [w].[NormalizedUserName], [w].[PasswordHash], [w].[PhoneNumber], [w].[PhoneNumberConfirmed], [w].[RefreshToken], [w].[SecurityStamp], [w].[TwoFactorEnabled], [w].[UserName], [w].[UserType]
+FROM [WalureUser] AS [w]
+WHERE [w].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-21 13:33:20.518 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[ClaimType], [w].[ClaimValue], [w].[UserId]
+FROM [WalureUserClaim] AS [w]
+WHERE [w].[UserId] = @__user_Id_0
+2022-11-21 13:33:20.577 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:33:20.602 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[InBuilt], [w].[ModifiedBy], [w].[ModifiedOn], [w].[Name], [w].[NormalizedName]
+FROM [WalureRole] AS [w]
+WHERE [w].[NormalizedName] = @__normalizedName_0
+2022-11-21 13:33:20.662 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[ClaimType], [w].[ClaimValue]
+FROM [WalureRoleClaim] AS [w]
+WHERE [w].[RoleId] = @__role_Id_0
+2022-11-21 13:33:20.681 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w0].[Name]
+FROM [WalureUserRole] AS [w]
+INNER JOIN [WalureRole] AS [w0] ON [w].[RoleId] = [w0].[Id]
+WHERE [w].[UserId] = @__userId_0
+2022-11-21 13:33:20.687 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-21 13:33:21.151 +01:00 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (Size = 50), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 100), @p10='?' (Size = 50), @p11='?' (Size = 400), @p12='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OpenIddictTokens] ([Id], [ApplicationId], [AuthorizationId], [ConcurrencyToken], [CreationDate], [ExpirationDate], [Payload], [Properties], [RedemptionDate], [ReferenceId], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-21 13:33:21.379 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 3599
+}.
+2022-11-21 13:33:21.403 +01:00 [INF] Executed action Onboarding.Controllers.AccountController.Token (Onboarding) in 13204.4377ms
+2022-11-21 13:33:21.405 +01:00 [INF] Executed endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-21 13:33:21.427 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74 - 200 2114 application/json;charset=UTF-8 13805.7979ms
+2022-11-21 13:33:43.432 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296
+2022-11-21 13:33:43.458 +01:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-11-21 13:33:43.466 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-21 13:33:43.472 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-11-21 13:33:43.473 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/Account/register application/json 296 - 401 0 - 40.2710ms
