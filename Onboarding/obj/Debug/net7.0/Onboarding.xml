@@ -13,6 +13,7 @@
             <summary>
             Api for Account and User registration
             </summary>
+            
         </member>
         <member name="M:Onboarding.Controllers.AccountController.#ctor(DataAccess.IServices.IAccountServices,Microsoft.AspNetCore.Identity.UserManager{DataAccess.Model.Identity.WalureUser},Microsoft.AspNetCore.Identity.SignInManager{DataAccess.Model.Identity.WalureUser},Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Identity.IdentityOptions})">
             <summary>

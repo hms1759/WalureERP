@@ -24,8 +24,8 @@ namespace Onboarding.Controllers
     /// <summary>
     /// Api for Account and User registration
     /// </summary>
+    /// 
     [Route("api/[controller]")]
-    [Authorize]
     public class AccountController : BaseController
     {
         private readonly IOptions<IdentityOptions> _identityOptions;
