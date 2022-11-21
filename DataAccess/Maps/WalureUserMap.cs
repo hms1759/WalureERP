@@ -24,24 +24,24 @@ public class WalureUserMap : IEntityTypeConfiguration<WalureUser>
     {
         var WalureUser = new WalureUser
         {
-            CreatedBy = Defaults.SysUserEmail.ToString(),
+            CreatedBy = Defaults.SysUserEmail,
             CreatedOn = Defaults.CreatedOn,
-            ModifiedBy = Defaults.SysUserEmail.ToString(),
+            ModifiedBy = Defaults.SysUserEmail,
             ModifiedOn = Defaults.ModifiedOn,
-            Id = Guid.Parse("C611F116-75DA-4D1C-9975-C1F862D12C20"),
-            Email = Defaults.SysUserEmail.ToString(),
-            FirstName= Defaults.SysUserEmail.ToString(),
-            LastName= Defaults.SysUserEmail.ToString(),
-            EmailConfirmed = true,
-            NormalizedEmail = Defaults.SysUserEmail.ToString().ToUpper(),
+            Id = Defaults.SysUserId,
+            Email = Defaults.SysUserEmail,
+            FirstName= Defaults.SysName.ToString(),
+            LastName= Defaults.SysName.ToString(),
+            NormalizedEmail = Defaults.SysUserEmail.ToUpper(),
             PhoneNumber = "08009300832",
-            UserName = Defaults.SysUserEmail.ToString(),
-            NormalizedUserName = Defaults.SysUserEmail.ToString().ToUpper(),
+            UserName = Defaults.SysUserEmail,
+            NormalizedUserName = Defaults.SysUserEmail.ToUpper(),
             TwoFactorEnabled = false,
-            PhoneNumberConfirmed = true,
+            PhoneNumberConfirmed = false,
             PasswordHash = Hasher.HashPassword(null, "micr0s0ft_"),
-            SecurityStamp = "536f8ac3-0df8-45d2-8f34-630d0a2ed6e6",
+            SecurityStamp = Guid.NewGuid().ToString(),
             UserType = UserTypes.inBuilt,
+            AccessFailedCount = 1
         };
 
 

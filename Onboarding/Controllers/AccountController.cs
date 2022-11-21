@@ -201,7 +201,7 @@ namespace Onboarding.Controllers
                    Scopes.OpenId,
                    Scopes.Email,
                    Scopes.Profile,
-                   Scopes.OfflineAccess,
+                   Scopes.Phone,
                    Scopes.Roles,
                 }.Intersect(oidcRequest.GetScopes()));
             }

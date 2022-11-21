@@ -1529,3 +1529,58 @@ System.FormatException: The input is not a valid Base-64 string as it contains a
 2022-11-20 19:16:48.926 +01:00 [INF] The token request was successfully validated.
 2022-11-20 19:16:48.964 +01:00 [INF] Executing endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
 2022-11-20 19:16:48.984 +01:00 [INF] Route matched with {action = "Token", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token() on controller Onboarding.Controllers.AccountController (Onboarding).
+2022-11-20 19:20:32.295 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-20 19:20:32.650 +01:00 [INF] Now listening on: https://localhost:7076
+2022-11-20 19:20:32.651 +01:00 [INF] Now listening on: http://localhost:5246
+2022-11-20 19:20:32.652 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-20 19:20:32.653 +01:00 [INF] Hosting environment: Development
+2022-11-20 19:20:32.653 +01:00 [INF] Content root path: C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding
+2022-11-20 19:20:34.984 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - -
+2022-11-20 19:20:37.671 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - - - 200 - text/html;charset=utf-8 2690.0203ms
+2022-11-20 19:20:37.730 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - -
+2022-11-20 19:20:37.769 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 38.5591ms
+2022-11-20 19:20:39.125 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/_vs/browserLink - -
+2022-11-20 19:20:39.888 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 763.5857ms
+2022-11-20 19:20:40.099 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - -
+2022-11-20 19:20:40.449 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 349.6648ms
+2022-11-20 19:21:01.679 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74
+2022-11-20 19:21:01.742 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-20 19:21:01.764 +01:00 [INF] The token request was successfully extracted: {
+  "username": "Admin@walurecapital.com",
+  "password": "[redacted]",
+  "grant_type": "password"
+}.
+2022-11-20 19:21:01.929 +01:00 [INF] The token request was successfully validated.
+2022-11-20 19:21:01.984 +01:00 [INF] Executing endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-20 19:21:02.004 +01:00 [INF] Route matched with {action = "Token", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token() on controller Onboarding.Controllers.AccountController (Onboarding).
+2022-11-20 19:21:09.977 +01:00 [INF] Executed DbCommand (78ms) [Parameters=[@__normalizedEmail_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [w].[Id], [w].[AccessFailedCount], [w].[ConcurrencyStamp], [w].[CreatedBy], [w].[CreatedOn], [w].[Email], [w].[EmailConfirmed], [w].[FirstName], [w].[Gender], [w].[IsDeleted], [w].[LastName], [w].[LockoutEnabled], [w].[LockoutEnd], [w].[MiddleName], [w].[ModifiedBy], [w].[ModifiedOn], [w].[NormalizedEmail], [w].[NormalizedUserName], [w].[PasswordHash], [w].[PhoneNumber], [w].[PhoneNumberConfirmed], [w].[RefreshToken], [w].[SecurityStamp], [w].[TwoFactorEnabled], [w].[UserName], [w].[UserType]
+FROM [WalureUser] AS [w]
+WHERE [w].[NormalizedEmail] = @__normalizedEmail_0
+2022-11-20 19:21:10.311 +01:00 [INF] Executed action Onboarding.Controllers.AccountController.Token (Onboarding) in 8301.2758ms
+2022-11-20 19:21:10.312 +01:00 [INF] Executed endpoint 'Onboarding.Controllers.AccountController.Token (Onboarding)'
+2022-11-20 19:21:10.316 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at Microsoft.AspNetCore.Identity.UserManager`1.VerifyPasswordAsync(IUserPasswordStore`1 store, TUser user, String password)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CheckPasswordAsync(TUser user, String password)
+   at Onboarding.Controllers.AccountController.PasswordSignIn(OpenIddictRequest request) in C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\Controllers\AccountController.cs:line 166
+   at Onboarding.Controllers.AccountController.Token() in C:\Users\hp\source\repos\WalureERP\walureErp\Onboarding\Controllers\AccountController.cs:line 80
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2022-11-20 19:21:10.338 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7076/api/auth/token application/x-www-form-urlencoded 74 - 500 - text/plain;+charset=utf-8 8659.1875ms

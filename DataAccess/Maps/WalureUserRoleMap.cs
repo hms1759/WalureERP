@@ -25,6 +25,7 @@ namespace DataAccess.Maps
                 {
                     UserId = Defaults.SysUserId,
                     RoleId = RoleHelpers.INBUILT_ADMIN_ID(),
+                    
                 }
             };
 

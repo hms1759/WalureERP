@@ -2,6 +2,7 @@
 
 #pragma warning disable CS1591 
 using DataAccess.Dto;
+using DataAccess.Enums;
 using DataAccess.Helper;
 using DataAccess.IServices;
 using DataAccess.Model;
@@ -141,7 +142,7 @@ namespace DataAccess.Services
                 LockoutEnabled = false,
                 AccessFailedCount = 1,
                 TwoFactorEnabled = false,
-                PhoneNumberConfirmed = false
+                PhoneNumberConfirmed = false,
 
             };
 
